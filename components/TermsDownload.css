@@ -1,0 +1,79 @@
+.terms-download {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.terms-download-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terms-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.terms-summary {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.terms-summary-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.terms-summary-list {
+  list-style: disc;
+  padding: 0;
+}
+
+.terms-summary-list li {
+  padding: 0.75rem 0;
+  padding-left: 10px;
+  position: relative;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.terms-download-button-container {
+  text-align: center;
+}
+
+.terms-download-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.terms-download-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .terms-download {
+    padding: 2rem 1rem;
+  }
+
+  .terms-title {
+    font-size: 2rem;
+  }
+
+  .terms-summary {
+    padding: 1.5rem;
+  }
+}
+

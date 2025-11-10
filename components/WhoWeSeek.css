@@ -1,0 +1,120 @@
+.who-we-seek {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.who-we-seek-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-we-seek-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.who-we-seek-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.talents-section {
+  margin-bottom: 3rem;
+}
+
+.talents-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.talents-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.talent-tag {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+}
+
+.talent-tag:hover {
+  transform: scale(1.05);
+  background-color: #1d4ed8;
+}
+
+.ideal-participant {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ideal-participant-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.ideal-participant-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ideal-participant-list li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+  line-height: 1.6;
+}
+
+.ideal-participant-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .who-we-seek {
+    padding: 2rem 1rem;
+  }
+
+  .who-we-seek-title {
+    font-size: 2rem;
+  }
+
+  .talents-grid {
+    gap: 0.75rem;
+  }
+
+  .talent-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .ideal-participant {
+    padding: 1.5rem;
+  }
+}
+
