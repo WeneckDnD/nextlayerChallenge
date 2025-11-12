@@ -33,15 +33,25 @@
   margin-bottom: 1.5rem;
 }
 
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+
+}
+
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: #333;
+
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -52,9 +62,175 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: #2563eb;
+}
+
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group select {
+  cursor: pointer;
+  background-color: white;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.file-input-wrapper:has(.file-input-hidden:focus) {
+  border-color: #2563eb;
+}
+
+.file-input-hidden {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-input-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #2563eb;
+  color: white !important;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.file-input-button:hover {
+  background-color: #1d4ed8;
+}
+
+.file-input-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-info {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.team-member-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.team-member-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.team-member-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.team-member-fields .form-group {
+  margin-bottom: 1rem;
+}
+
+.team-member-fields .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.add-member-button,
+.remove-member-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #2563eb;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-member-button {
+  background-color: #2563eb;
+  color: white;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.add-member-button:hover {
+  background-color: #1d4ed8;
+}
+
+.remove-member-button {
+  background-color: white;
+  color: #dc2626;
+  border-color: #dc2626;
+  white-space: nowrap;
+}
+
+.remove-member-button:hover {
+  background-color: #fee2e2;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.checkbox-label > span {
+  margin-left: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #2563eb;
+  flex-shrink: 0;
+}
+
+.checkbox-label span {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .form-group textarea {
@@ -112,6 +288,42 @@
 
   .registration-form {
     padding: 1.5rem;
+  }
+
+  .name-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .file-input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .file-input-button {
+    width: 100%;
+  }
+
+  .file-input-text {
+    text-align: center;
+  }
+
+  .team-member-card {
+    padding: 1rem;
+  }
+
+  .team-member-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .team-member-header h4 {
+    font-size: 1rem;
+  }
+
+  .remove-member-button {
+    width: 100%;
   }
 }
 
